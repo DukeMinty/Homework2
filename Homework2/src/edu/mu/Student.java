@@ -1,4 +1,4 @@
-package edu.mu.student;
+package edu.mu;
 
 public class Student {
 
