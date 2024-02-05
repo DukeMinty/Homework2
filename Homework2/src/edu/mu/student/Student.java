@@ -5,6 +5,7 @@ public class Student {
 	private int id;
 	private String name;
 	private double grade;
+	
 	public Student(int id, String name, double grade) {
 		this.id = id;
 		this.name = name;
@@ -34,13 +35,8 @@ public class Student {
 		this.grade = grade;
 	}
 	
-	public boolean toString(Student student) {
-		if(student==null) {
-			return false;
-		}
-		else {
-			System.out.println("Name: " + student.getName() + ", ID: " + student.getId() + ", Grade: " + student.getGrade());
-			return true;
-		}
+	public String toString() {
+		String studentString = "Name: " + this.getName() + ", ID: " + this.getId() + ", Grade: " + this.getGrade();
+		return studentString;
 	}
 }
