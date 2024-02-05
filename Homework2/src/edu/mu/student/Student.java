@@ -6,6 +6,12 @@ public class Student {
 	private String name;
 	private double grade;
 	
+	public Student() {
+		this.id = 0;
+		this.name = "";
+		this.grade = 0.0;
+	}
+	
 	public Student(int id, String name, double grade) {
 		this.id = id;
 		this.name = name;
