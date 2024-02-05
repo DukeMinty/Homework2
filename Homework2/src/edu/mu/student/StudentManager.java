@@ -7,7 +7,11 @@ import java.util.Scanner;
 
 public class StudentManager {
 	
-	ArrayList<Student> studentList = new ArrayList<>();
+	public ArrayList<Student> studentList;
+	
+	public StudentManager() {
+		this.studentList = new ArrayList<>();
+	}
 	
 	public boolean readFromFile() {
 		try {
