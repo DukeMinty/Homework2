@@ -7,21 +7,28 @@ import java.util.Scanner;
 
 public class StudentManager {
 	
-	public ArrayList<Student> studentList;
+	private Student[] studentList;
 	
 	public StudentManager() {
-		this.studentList = new ArrayList<>();
+		this.studentList = new Student[6];
+	}
+	public StudentManager(int value) {
+		this.studentList = new Student[value];
 	}
 	
-	public boolean readFromFile() {
+	public boolean readFromFile(String filePath) {
 		try {
-			Scanner fileIn = new Scanner(new FileInputStream("files/studentData.txt"));
+			Scanner fileIn = new Scanner(new FileInputStream(filePath));
 			while(fileIn.hasNext()) {
 				int id = fileIn.nextInt();
 				String name = fileIn.next() + " " + fileIn.next();
 				double grade = fileIn.nextDouble();
 				Student student = new Student(id,name,grade);
-				studentList.add(student);
+				//Ask prof how to initialize this array
+				//Does he want us to just make it a pre-determined length?
+				//Or find it's length another way and make it part of the StudentManager constructor?
+				
+				//studentList.add(student);
 				
 			}
 			fileIn.close();
