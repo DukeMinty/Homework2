@@ -16,9 +16,9 @@ public class StudentManager {
 	public boolean readFromFile() {
 		try {
 			Scanner fileIn = new Scanner(new FileInputStream("files/studentData.txt"));
-			while(fileIn.hasNextLine()) {
+			while(fileIn.hasNext()) {
 				int id = fileIn.nextInt();
-				String name = fileIn.next();
+				String name = fileIn.next() + " " + fileIn.next();
 				double grade = fileIn.nextDouble();
 				Student student = new Student(id,name,grade);
 				studentList.add(student);
