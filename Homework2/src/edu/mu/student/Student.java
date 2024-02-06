@@ -45,4 +45,20 @@ public class Student {
 		String studentString = "Name: " + this.getName() + ", ID: " + this.getId() + ", Grade: " + this.getGrade();
 		return studentString;
 	}
+	
+	public boolean equals(Object obj) {
+		Student s = ((Student)obj);
+		
+		if (this.getName().equals(s.getName()) &&
+					this.getId() == s.getId() &&
+					this.getGrade() == s.getGrade()) {
+			return true;
+		}
+		
+		return false;
+	}
+	
+	public boolean equals(int id) {
+		return this.getId() == id;
+	}
 }
