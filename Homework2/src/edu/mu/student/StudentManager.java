@@ -33,5 +33,17 @@ public class StudentManager {
 		}
 		
 	
-	}	
+	}
+	
+	public boolean searchStudentById(int id) {
+		for (Student student : this.studentList) {
+			if (student.equals(id)) {
+				System.out.println("Student found: \n\t" + student.toString());
+				return true;
+			}
+		}
+		
+		System.out.println("No student with Id: " + id + " was found.");
+		return false;
+	}
 }
