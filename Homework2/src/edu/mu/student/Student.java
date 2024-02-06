@@ -41,11 +41,13 @@ public class Student {
 		this.grade = grade;
 	}
 	
+	@Override
 	public String toString() {
 		String studentString = "Name: " + this.getName() + ", ID: " + this.getId() + ", Grade: " + this.getGrade();
 		return studentString;
 	}
 	
+	@Override
 	public boolean equals(Object obj) {
 		Student s = ((Student)obj);
 		
