@@ -18,11 +18,13 @@ public class StudentManager {
 	public boolean readFromFile(String filePath) {
 		try {
 			Scanner fileIn = new Scanner(new FileInputStream(filePath));
-			while(fileIn.hasNext()) {
-				int id = fileIn.nextInt();
-				String name = fileIn.next() + " " + fileIn.next();
-				double grade = fileIn.nextDouble();
-				Student student = new Student(id,name,grade);
+//			while(fileIn.hasNext()) {
+				for (int i = 0; i < studentList.length; i++) {
+					int id = fileIn.nextInt();
+					String name = fileIn.next() + " " + fileIn.next();
+					double grade = fileIn.nextDouble();
+					Student student = new Student(id,name,grade);
+					studentList[i] = student;
 				
 			}
 			fileIn.close();
