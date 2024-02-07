@@ -9,7 +9,7 @@ public class StudentManager {
 	private Student[] studentList;
 	
 	public StudentManager() {
-		studentList = new Student[6];
+		studentList = new Student[5];
 	}
 	public StudentManager(int value) {
 		studentList = new Student[value];
@@ -23,11 +23,6 @@ public class StudentManager {
 				String name = fileIn.next() + " " + fileIn.next();
 				double grade = fileIn.nextDouble();
 				Student student = new Student(id,name,grade);
-				//Ask prof how to initialize this array
-				//Does he want us to just make it a pre-determined length?
-				//Or find it's length another way and make it part of the StudentManager constructor?
-				
-				//studentList.add(student);
 				
 			}
 			fileIn.close();
