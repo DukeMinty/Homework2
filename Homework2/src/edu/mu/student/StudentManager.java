@@ -2,7 +2,6 @@ package edu.mu.student;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StudentManager {
@@ -10,10 +9,10 @@ public class StudentManager {
 	private Student[] studentList;
 	
 	public StudentManager() {
-		this.studentList = new Student[6];
+		studentList = new Student[6];
 	}
 	public StudentManager(int value) {
-		this.studentList = new Student[value];
+		studentList = new Student[value];
 	}
 	
 	public boolean readFromFile(String filePath) {
