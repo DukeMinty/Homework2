@@ -25,7 +25,6 @@ public class StudentManager {
 					double grade = fileIn.nextDouble();
 					Student student = new Student(id,name,grade);
 					studentList[i] = student;
-				
 			}
 			fileIn.close();
 			return true;
@@ -34,8 +33,6 @@ public class StudentManager {
 				e.printStackTrace();
 				return false;
 		}
-		
-	
 	}
 	
 	public boolean searchStudentById(int id) {
@@ -45,7 +42,6 @@ public class StudentManager {
 				return true;
 			}
 		}
-		
 		System.out.println("No student with Id: " + id + " was found.");
 		return false;
 	}
