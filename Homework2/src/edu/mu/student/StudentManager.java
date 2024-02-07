@@ -33,6 +33,10 @@ public class StudentManager {
 				e.printStackTrace();
 				return false;
 		}
+		catch(IllegalArgumentException e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 	
 	public boolean searchStudentById(int id) {
