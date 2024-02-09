@@ -30,10 +30,12 @@ public class StudentManager {
 			return true;
 		}
 		catch(FileNotFoundException e) {
-				e.printStackTrace();
-				return false;
+			System.out.println("Student data was not found");
+			e.printStackTrace();
+			return false;
 		}
 		catch(IllegalArgumentException e) {
+			System.out.println("Student data is incompatible");
 			e.printStackTrace();
 			return false;
 		}
