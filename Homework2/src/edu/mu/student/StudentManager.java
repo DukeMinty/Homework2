@@ -38,6 +38,16 @@ public class StudentManager {
 			return false;
 		}
 	}
+	public void displayStudents() {
+		if(this.studentList == null|| this.studentList.length <= 0) {
+			System.out.println("Student array is Empty");
+		}else{
+			System.out.println("Students: ");
+			for(Student student : this.studentList) {
+				System.out.println(student.toString());
+			}
+		}		
+	}
 	
 	public boolean searchStudentById(int id) {
 		for (Student student : this.studentList) {
