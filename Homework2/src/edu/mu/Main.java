@@ -4,6 +4,7 @@ import edu.mu.student.StudentManager;
 
 public class Main {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		// Instantiate StudentManager, perform operations based on the requirements.
 		StudentManager studentManager = new StudentManager();
