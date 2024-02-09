@@ -59,4 +59,16 @@ public class StudentManager {
 		System.out.println("No student with Id: " + id + " was found.");
 		return false;
 	}
+	
+	public boolean updateStudentGradeById(int id, double grade) {
+		if (searchStudentById(id)){
+			for (Student student : this.studentList) {
+				if (student.getId() == id) {
+					student.setGrade(grade);
+					return true;
+				}
+			}
+		}
+		return false;
+	}	
 }
