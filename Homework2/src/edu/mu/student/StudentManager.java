@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class StudentManager {
 	
 	private Student[] studentList;
+	private boolean fileScanned = false;
 	
 	public StudentManager() {
 		studentList = new Student[5];
@@ -27,6 +28,7 @@ public class StudentManager {
 					studentList[i] = student;
 			}
 			fileIn.close();
+			fileScanned = true;
 			return true;
 		}
 		catch(FileNotFoundException e) {
@@ -52,13 +54,15 @@ public class StudentManager {
 	}
 	
 	public boolean searchStudentById(int id) {
-		for (Student student : this.studentList) {
-			if (student.equals(id)) {
-				System.out.println("Student found: \n\t" + student.toString());
-				return true;
+		if (fileScanned) {
+			for (Student student : this.studentList) {
+				if (student.equals(id)) {
+					System.out.println("Student found: \n\t" + student.toString());
+					return true;
+				}
 			}
 		}
-		System.out.println("No student with Id: " + id + " was found.");
+		System.out.println("No student with Id " + id + " was found.");
 		return false;
 	}
 	
